@@ -115,3 +115,137 @@ say_myself("강경오", 34, True)
 say_myself("강경오", 35, False)
 
 # %%
+a=add(3, 4)
+print(a)
+
+# %%
+def add_mul(choice, *args):
+    if choice == "add":
+        result = 9
+        for i in args:
+            result = result + i
+    elif choice == "mul":
+        result = 4
+        for i in args:
+            result = result * i
+    return result
+
+# %%
+result = add_mul('add', 1, 2, 3)
+print(result)
+
+# %%
+result = add_mul('mul', 1, 2, 3)
+print(result)
+
+# %%
+def print_kwargs(**kwargs):
+    print(kwargs)
+
+# %%
+print_kwargs(a=1)
+
+# %%
+print_kwargs(name='deny', sexural='M', age='23', job='free lancer')
+
+# %%
+def add_and_mul(a, b):
+    return a+b, a*b
+
+# %%
+result = add_and_mul(3, 4)
+print(result)
+
+# %%
+result1, result2 = add_and_mul(3, 4)
+print(result1)
+print(result2)
+
+# %%
+def say_nick(nick):
+    if nick == "바보":
+        return
+    print(f"나의 별명은 {nick}입니다.")
+
+# %%
+say_nick('야호')
+print(say_nick)
+
+# %%
+say_nick('바보')
+
+# %%
+def say_myself(name, age, man=True):
+    print(f"나의 이름은 {name}입니다.")
+    print(f"나이는 {age}세입니다.")
+    if man:
+        print("남자입니다.")
+    else:
+        print("여자입니다.")
+    
+# %%
+say_myself("우향우", 22)
+
+# %%
+say_myself("우향우", 22, True)
+
+# %%
+say_myself("jane", 25, False)
+
+# %%
+a = 1
+def vartest(a):
+    a = a+1
+
+# %%
+vartest(a)
+print(a)
+
+# %%
+a = 1
+def vartest(a):
+    a = a+1
+    return a
+a = vartest(a)
+print(a)
+
+# %%
+a = 1
+def vartest():
+    global a
+    a = a+1
+
+vartest()
+print(a)
+
+# %%
+add = lambda a, b: a+b
+result = add(3, 4)
+print(result)
+
+# %%
+def add(a, b):
+    return a+b
+
+result = add(3, 4)
+print(result)
+
+# %%
+
+def add(a, b):
+    """
+    두 숫자를 더하는 함수
+    
+    Parameters:
+    a (int, float): 첫번째 숫자
+    b (int, float): 두번째 숫자
+
+    Returns:
+    int, float: 두 숫자의 합
+    """
+    return a+b
+
+# 독스트링 확인하기
+print(add.__doc__)
+
+# %%
