@@ -14,6 +14,7 @@ class MyIterator:
         result = self.data[self.position]
         self.position += 1
         return result
+
 if __name__ == "__main__":
     i = MyIterator([1, 2, 3])
     for item in i:
